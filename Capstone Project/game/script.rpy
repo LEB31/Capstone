@@ -1,9 +1,10 @@
-﻿# The script of the game goes in this file.
+﻿# Characters made by svstudioart
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Evelyn")
+define j = Character("Jay")
 
 
 # The game starts here.
@@ -16,17 +17,21 @@ label start:
 
     scene bg
 
+    play sound 'audio/the_field_of_dreams.mp3'
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show base1
+    show 1
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    "The story starts with a group of friends"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    j "I'm not doing the dishes tonight."
+
+    j "That's your problem."
 
     # This ends the game.
 
