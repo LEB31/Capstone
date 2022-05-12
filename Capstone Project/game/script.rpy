@@ -1,5 +1,4 @@
-﻿# Characters made by svstudioart
-# Bookstore by Martin Adams
+﻿# Lily Bain  Verion 1.2  Capstone Project
 # The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
@@ -28,15 +27,66 @@ label start:
 
     "You and your friend Miriam are trying to decide where to go today."
 
-    show happy 
+    show idle1
 
-    y "Why don't we go to the movies?"
+    menu:
 
-    show angry 
+        "We should go..."
 
-    m "Are you insane?! There is way to many people!"
+        "To the movies":
 
-    # This ends the game.
+            jump movies
 
-    return
+        "To the park":
 
+            jump park
+
+label movies:
+
+    scene movietheater
+
+    show sad1
+
+    m "I don't like it here..."
+
+    m "Let's go the the park instead.."
+    jump park
+
+
+
+label park:
+
+    scene park
+
+    show happy1
+
+    m "This was a good choice!"
+    hide happy1 
+    show happy2
+    m "The flowers are beautiful!"
+    
+    menu: 
+        "How do I Respond?"
+        "Quite beautiful":
+            jump beautiful
+        "I've seen better":
+            jump seen
+
+
+label beautiful:
+    scene park
+
+    show happy3 
+    m "They're perfect!"
+
+label seen:
+    scene park
+
+    hide happy2 
+    show angry2
+
+    m "You're joking"
+
+# This ends the game.
+
+return
